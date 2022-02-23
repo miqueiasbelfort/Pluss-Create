@@ -1,63 +1,76 @@
 import styled from 'styled-components'
 
-export const BoxMaster = styled.div`
+export const Container = styled.div` //Div Container
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
-    overflow-y: hidden;
 
-    img{
-        width: 60%;
-        background: cover;
-        filter: brightness(80%);
+    div:first-child{
+        max-width: 60%;
+        width: 100%;
+        height: 100%;
+        background: black;
     }
-`;
 
-export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    div{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    @media(max-width: 1023px){
+        div:first-child{
 
-    img{
-        width: 300px;
+        }
+        div{
+            font-size: 12px;
+            img{
+                width: 250px;
+            }
+        }
+    }
+    @media(max-width: 767px){
+        div:first-child{
+            display: none;
+        }
+        div{
+            width: 100%;
+            font-size: 18px;
+            img{
+                width: 350px;
+            }
+        }
     }
 `
 
-export const MaxContainer = styled.div`
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 40px;
-`
-
-export const DisplayFlexDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-`
 export const Button = styled.button`
     width: 200px;
     padding: 10px;
     border-radius: 8px;
-    background: #FCA213;
+    background: ${props => `${props.background}`};
     border: none;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    font-weight: bold;
-    transition: all .2s ease;
+    font-weight: 700;
+    transition: background .2s;
     cursor: pointer;
-`
 
-export const GitButton = styled.button`
-    background: #000;
+    &:hover{
+        background: ${props => `${props.backgroundHover}`};
+    }
+
+    @media(max-width: 767px){
+        width: 300px;
+        font-size: 19px;
+    }
+
+`
+export const Img = styled.img`
+    width: 400px;
 `

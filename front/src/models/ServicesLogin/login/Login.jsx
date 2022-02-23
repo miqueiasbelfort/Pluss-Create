@@ -1,31 +1,45 @@
-import {BoxMaster, MaxContainer, Container, DisplayFlexDiv, Button, GitButton} from './styles'
-import LoginImg from '../../imgs/login1.svg'
-import Logo from '../../imgs/Pluss+Class_Logo.svg'
-import {FaGoogle,FaGithub} from 'react-icons/fa'
+import {Container, Button, Img} from './styles' 
+import Logo from '../../imgs/Pluss+Class_Logo.svg' // Logo Pluss + Class
+import {FaGoogle, FaGithub} from 'react-icons/fa' // Font Awesome
 
 function Login(){
     return (
-        <BoxMaster>
+        <Container>
 
-            <img src={LoginImg} alt="Imagem Login"/>
-            
-            <MaxContainer>
+            <div>
+                {/*Colocar img pagina do login*/}
+            </div>
+    
+            <div>
 
-                <img src={Logo} alt="Logo Pluss+Class" />
+                <Img src={Logo} alt="Logo Pluss+Class" />
 
-                <Container>
+                <div>
 
                     <h2>Entrar com...</h2>
 
-                    <DisplayFlexDiv>
-                        <Button><FaGoogle/>Google</Button>
-                        <Button><FaGithub/>GitHub</Button>
-                    </DisplayFlexDiv>
+                    <div>
+                        <Button 
+                            background="#FCA213"
+                            backgroundHover="#db8700"
+                        > 
+                            <FaGoogle/> Google
 
-                </Container>
+                        </Button>
 
-            </MaxContainer>
-        </BoxMaster>
+                        <Button 
+                            background="#000000"
+                            backgroundHover="#1d1d1d"
+                        > 
+                            <FaGithub/> GitHub 
+
+                        </Button>
+                    </div>
+
+                </div>
+
+            </div>
+        </Container>
     )
 }
 export default Login
