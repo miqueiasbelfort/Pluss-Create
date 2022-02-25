@@ -1,11 +1,13 @@
-import Login from "./models/ServicesLogin/login/Login"
+import Login from "./models/PageLogin"
+import { GlobalStyles } from "./styles/GlobalStyles"
 
 function App() {
 
   return (
-    <div className="App">
+    <>
+      <GlobalStyles/>
       <Login />
-    </div>
+    </>
   )
 }
 
