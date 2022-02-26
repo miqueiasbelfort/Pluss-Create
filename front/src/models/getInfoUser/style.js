@@ -12,7 +12,7 @@ export const MaxContainer = styled.div`
 `
 
 export const BoxForm = styled.form`
-    max-width: 70%;
+    max-width: 60%;
     width: 100%;
     max-height: 85%;
     height: 100%;
@@ -22,7 +22,6 @@ export const BoxForm = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
-
     h1{
         text-align: center;
         font-weight: 400;
@@ -31,11 +30,16 @@ export const BoxForm = styled.form`
         width: 200px;
         margin-top: 20px;
     }
+
+    @media (max-width: 760px){
+        font-size: 16px;
+        max-width: 100%;
+    }
 `
 
 export const Form = styled.div`
     width: 100%;
-    height: 100%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,7 +48,6 @@ export const Form = styled.div`
 
     input{
         width: 80%;
-        background: tras;
         padding: 10px;
         border-radius: 10px;
         border: 1px solid gray;
@@ -53,5 +56,19 @@ export const Form = styled.div`
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+    @media (max-width: 999px){
+        input{
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 760px){
+        input{
+            width: 100%;
+        }
+        button{
+            width: 150px;
+        }
     }
 `

@@ -8,8 +8,6 @@ export default function GetInfoUser(){
 
     
     const [valueInputOption, setValueInputOption] = useState()
-    //const [value, setValue] = useState()
-    //setValue(valueInputOption)
 
     return (
         <MaxContainer>
@@ -34,17 +32,14 @@ export default function GetInfoUser(){
                         placeholder="Selecione uma das opções ↓"
                         list="Lista"
                         id="options"
-                        onChange={e => {
-                            setValueInputOption(e.target.value)
-                            //setValue(valueInputOption)
-                        }}
+                        onChange={e => {setValueInputOption(e.target.value)}}
                     />
                     <datalist className="optionInputList" id="Lista">
                         <option value="Aluno">Aluno</option>
                         <option value="Professor">Professor</option>
                     </datalist>
                     
-                    {valueInputOption == "Professor" ? (
+                    {valueInputOption == "Professor" ? ( //Verificação da opção de aluno ou professor
                         <div className="teacherAndStudenty">
                             <label htmlFor="">Olá professor escolha o nome da sua sala:</label>
                             <input 
@@ -69,7 +64,7 @@ export default function GetInfoUser(){
                     <Button
                         type="submit"
                         background="#13213B"
-                        backgroundHover="#0e1624"
+                        backgroundHover="#2e4366"
                     >Proximo <FaArrowRight/></Button>
 
                 </Form>
