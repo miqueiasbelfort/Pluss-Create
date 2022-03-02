@@ -8,67 +8,43 @@ export const MaxContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
     background-image: url(${BackgroundPicture});
+    background-repeat: no-repeat;
 `
-
-export const BoxForm = styled.form`
-    max-width: 60%;
-    width: 100%;
-    max-height: 85%;
-    height: 100%;
-    background: #ffff;
-    border-radius: 45px;
+export const BoxForm = styled.div`
+    width: 500px;
+    height: 70%;
+    background: #fff;
     padding: 10px;
+    border-radius: 20px;
+    @media (max-width: 768px){
+        width: 95%;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
     h1{
-        text-align: center;
-        font-weight: 400;
+        font-size: 30px;
     }
     img{
         width: 200px;
-        margin-top: 20px;
-    }
-
-    @media (max-width: 760px){
-        font-size: 16px;
-        max-width: 100%;
+        margin-bottom: 15px;
     }
 `
 
-export const Form = styled.div`
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 20px;
-    gap: 10px;
+export const Button = styled.button`
+    width: 110px;
+    padding: 10px;
+    background: var(--color-primary);
+    border: none;
+    color: #fff;
+    outline: none;
+    border-radius: 10px;
+    transition: all .2s;
 
-    input{
-        width: 80%;
-        padding: 10px;
-        border-radius: 10px;
-        border: 1px solid gray;
-    }
-    .teacherAndStudenty{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-    @media (max-width: 999px){
-        input{
-            width: 100%;
-        }
-    }
-
-    @media (max-width: 760px){
-        input{
-            width: 100%;
-        }
-        button{
-            width: 150px;
-        }
+    &:hover{
+        background: #002c7e;
+        width: 120px;
     }
 `
