@@ -1,8 +1,12 @@
-import {MaxContainer, BoxForm, Form} from "./style"
+import {MaxContainer} from "./style"
 import { useState } from "react"
-import {FaArrowDown, FaArrowRight} from "react-icons/fa"
-import { Button } from "../PageLogin/styles"
+import {FaArrowRight} from "react-icons/fa"
+//import { Button } from "../PageLogin/styles"
 import Logo from "../PageLogin/assents/Pluss+Class_Logo.svg"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+//Bootstrap
+import {Button, Form, Group, Label, Control, Text, Check} from "bootstrap"
 
 export default function GetInfoUser(){
 
@@ -10,66 +14,27 @@ export default function GetInfoUser(){
     const [valueInputOption, setValueInputOption] = useState()
 
     return (
-        <MaxContainer>
-            <BoxForm action="/" method="post">
-                <h1>Preencha os Dados</h1>
-                
-                <img src={Logo} alt="Pluss + Class"/>
+      <MaxContainer>
+        <Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
 
-                <Form>
-                    <label htmlFor="nickname">Como você quer ser chamado?</label>
-                    <input 
-                        type="text" 
-                        placeholder="Nickname" 
-                        id="nickname" 
-                        name="nickname" 
-                        required
-                    />
-
-                    <label htmlFor="options">Escolha uma das opções:</label>
-                    <input 
-                        type="text"
-                        placeholder="Selecione uma das opções ↓"
-                        list="Lista"
-                        id="options"
-                        onChange={e => {setValueInputOption(e.target.value)}}
-                    />
-                    <datalist className="optionInputList" id="Lista">
-                        <option value="Aluno">Aluno</option>
-                        <option value="Professor">Professor</option>
-                    </datalist>
-                    
-                    {valueInputOption == "Professor" ? ( //Verificação da opção de aluno ou professor
-                        <div className="teacherAndStudenty">
-                            <label htmlFor="">Olá professor escolha o nome da sua sala:</label>
-                            <input 
-                                type="text"
-                                placeholder="Não pode conter caracteres nem sinais. Ex: Matematica" 
-                                id="nameclass"
-                                name="nameclass"
-                            />
-                        </div>
-                    ) : (
-                        <div className="teacherAndStudenty">
-                            <label htmlFor="codClass">Vamos estudar o que hoje?</label>
-                            <input 
-                                type="text"
-                                placeholder="Digite o código da sua sala:"
-                                id="codClass"
-                                name="codClass" 
-                            />
-                        </div>
-                    )}
-
-                    <Button
-                        type="submit"
-                        background="#13213B"
-                        backgroundHover="#2e4366"
-                    >Proximo <FaArrowRight/></Button>
-
-                </Form>
-
-            </BoxForm>
-        </MaxContainer>
-    )
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+      </MaxContainer>
+    );
 }
