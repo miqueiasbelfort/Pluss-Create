@@ -1,10 +1,8 @@
 import {MaxContainer, BoxForm, Button} from "./style"
 import {RiArrowRightFill} from "react-icons/ri"
 import { useState } from "react";
-import Logo from "../PageLogin/assents/Pluss+Class_Logo.svg"
 
 export default function GetInfoUser(){
-
   const [getOption, setGetOption] = useState()
 
     return (

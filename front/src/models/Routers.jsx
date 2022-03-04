@@ -1,14 +1,16 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import GetInfoUser from "./getInfoUser"
-import Login from "./PageLogin"
+import GetInfoUser from "./pagesLogin/formUser"
+import Login from "./pagesLogin/PageLogin"
+import Daskboard from "./pagesUser/daskboard"
 
 
 export default function Routers(){
     return (
         <Router>
             <Routes>
-                <Route path="/get-info-user" element={<GetInfoUser/>}/>
+                <Route path="/form-user" element={<GetInfoUser/>}/>
                 <Route path="/login" element={<Login />}/>
+                <Route path="/daskboard" element={<Daskboard />}/>
             </Routes>
         </Router>
     )
