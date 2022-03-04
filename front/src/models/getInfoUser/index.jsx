@@ -22,7 +22,7 @@ export default function GetInfoUser(){
                 class="form-select"
                 onChange={(e) => {
                   setGetOption(e.target.value)
-                  //console.log(getOption)
+                  console.log(getOption)
                 }} 
               >
                 <option selected>Selecione uma das opções:</option>
