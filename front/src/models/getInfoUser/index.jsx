@@ -7,15 +7,10 @@ export default function GetInfoUser(){
 
   const [getOption, setGetOption] = useState()
 
-  function requiredOptions(){
-    
-  }
-
     return (
       <MaxContainer>
         <BoxForm>
           <h1>Preencha os dados</h1>
-          <img src={Logo} alt="Pluss + Class" />
           <form className="row g-3" action="" method="post">
             <div className="col-12">
               <label htmlFor="inputAddress" className="form-label">Como você quer ser chamdo:</label>
@@ -27,7 +22,7 @@ export default function GetInfoUser(){
                 class="form-select"
                 onChange={(e) => {
                   setGetOption(e.target.value)
-                  console.log(getOption)
+                  //console.log(getOption)
                 }} 
               >
                 <option selected>Selecione uma das opções:</option>

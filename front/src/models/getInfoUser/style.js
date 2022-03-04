@@ -4,6 +4,7 @@ import BackgroundPicture from "./assents/backgroundPicture.jpg"
 export const MaxContainer = styled.div`
     width: 100vw;
     height: 100vh;
+    overflow-y: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
