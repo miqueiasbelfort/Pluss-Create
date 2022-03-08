@@ -1,27 +1,23 @@
-import {ContainerHeader, IconsButton, Nav} from "./style"
+import {Nav, Img, Perfil, Tools, ButtonAddClass} from "./style"
 import Logo from "../../pagesLogin/PageLogin/assents/Pluss+Class_Logo.svg"
-import { Link } from "react-router-dom"
+import {Link} from "react-router-dom"
 
-function HeaderNavbar({popupAddClass}) {
+function HeaderNavbar(){
     return (
-        <Nav className="navbar fixed-top navbar-light shadow-sm">
-            <ContainerHeader className="container">
-                <Link className="navbar-brand" to="/">
-                    <img src={Logo} alt="" width="150" height="24" />
-                </Link>
-                <div>
-                    <IconsButton
-                        onClick={popupAddClass}
-                    >+</IconsButton>
-                    <Link to="/">
-                        Professor Raul
-                    </Link>
-                    <Link to="/">
-                        <img width="24" height="24" className="rounded" src="//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fprofeflaviobrustoloni.files.wordpress.com%2F2014%2F07%2Fflavio1b.jpg%3Fw%3D488%26h%3D600&f=1&nofb=1" alt="porfil" />
-                    </Link>
-                </div>
-            </ContainerHeader>
+        <Nav className="shadow-sm">
+            <div className="logo">
+                <Img src={Logo} alt="logotipo" />
+            </div>
+            <Tools>
+                <ButtonAddClass>+</ButtonAddClass>
+                <Link className="link" to="/"><span>Professor Anna</span></Link>
+                <Perfil>
+                    <img src="//external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpostcron.com%2Fpt%2Fblog%2Fwp-content%2Fuploads%2F2016%2F05%2Ffoto-de-perfil-para-trabalho.jpg&f=1&nofb=1" alt="teacher photo" />
+                    <div className="iconPerfilTools"></div>
+                </Perfil>
+            </Tools>
         </Nav>
     )
 }
+
 export default HeaderNavbar

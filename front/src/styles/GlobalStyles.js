@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
   *,button , input{
     font-family: 'Poppins', sans-serif;
   }
-  html , bodt ,#root{
+  html , body ,#root{
     height:100%;
   }
   button, input {

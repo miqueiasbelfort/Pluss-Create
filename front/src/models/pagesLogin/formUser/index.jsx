@@ -31,7 +31,7 @@ export default function GetInfoUser(){
 
             <div className="col-12">
               <label htmlFor="inputAddress" className="form-label">Código da sua sala:</label>
-              <input type="text" className="form-control" id="inputAddress" placeholder="sala de aula" />
+              <input type="text" className="form-control" id="inputAddress" placeholder="Ex: abc123" />
             </div>
             <div>
               <Button>Proximo <RiArrowRightFill/></Button>
