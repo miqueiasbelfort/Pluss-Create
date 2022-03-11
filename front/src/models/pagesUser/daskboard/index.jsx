@@ -40,19 +40,19 @@ function Daskboard(){
                 <CardContainer>
                     {classdb.map(classes => (
                         <div className="card shadow" style={{width: "18rem"}}>
-                        <InfoClass className="card-body">
-                            <h3>{classes.title}</h3>
-                            <p>{classes.description}</p>
-                        </InfoClass>
-                        <div className="card-body">
-                            <ListOfData>
-                                <li>Alunos: {classes.students}</li>
-                                <li>Testes Aplicados: {classes.tests}</li>
-                                <li>Respostas: {classes.answered}</li>
-                                <li>Porcentagem: {Math.round(classes.answered * 10 / classes.students * 10)}%</li>
-                            </ListOfData>
+                            <InfoClass className="card-body">
+                                <h3>{classes.title}</h3>
+                                <p>{classes.description}</p>
+                            </InfoClass>
+                            <div className="card-body">
+                                <ListOfData>
+                                    <li>Alunos: {classes.students}</li>
+                                    <li>Testes Aplicados: {classes.tests}</li>
+                                    <li>Respostas: {classes.answered}</li>
+                                    <li>Porcentagem: {Math.round(classes.answered * 10 / classes.students * 10)}%</li>
+                                </ListOfData>
+                            </div>
                         </div>
-                    </div>
                     ))}
                 </CardContainer>
             </Container>

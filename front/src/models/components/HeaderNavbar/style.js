@@ -41,9 +41,14 @@ export const Tools = styled.div`
     }
 `
 export const ButtonAddClass = styled.button`
-    width: 25px;
+    padding: 0 5px;
     height: 25px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-weight: 400;
+    transition: all ease-out .2s;
+    &:hover{
+        background: var(--color-yellow);
+        color: #fff;
+    }
 `

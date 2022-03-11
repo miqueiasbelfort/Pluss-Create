@@ -1,6 +1,6 @@
-import {MaxContainer, BoxForm, Button} from "./style"
-import {RiArrowRightFill} from "react-icons/ri"
+import {MaxContainer, BoxForm} from "./style"
 import { useState } from "react";
+import Button from "../../components/ButtonNext";
 
 export default function GetInfoUser(){
   const [getOption, setGetOption] = useState()
@@ -34,7 +34,9 @@ export default function GetInfoUser(){
               <input type="text" className="form-control" id="inputAddress" placeholder="Ex: abc123" />
             </div>
             <div>
-              <Button>Proximo <RiArrowRightFill/></Button>
+              <Button 
+                textBtn="Próximo"
+              />
             </div>
           </form>
         </BoxForm>

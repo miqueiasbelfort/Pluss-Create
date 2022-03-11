@@ -9,7 +9,7 @@ function HeaderNavbar(){
                 <Img src={Logo} alt="logotipo" />
             </div>
             <Tools>
-                <ButtonAddClass>+</ButtonAddClass>
+                <Link to="/create-class"><ButtonAddClass>Criar Sala</ButtonAddClass></Link>
                 <Link className="link" to="/"><span>Professor Anna</span></Link>
                 <Perfil>
                     <img src="//external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpostcron.com%2Fpt%2Fblog%2Fwp-content%2Fuploads%2F2016%2F05%2Ffoto-de-perfil-para-trabalho.jpg&f=1&nofb=1" alt="teacher photo" />
